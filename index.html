@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - マイホームページ</title>
+    <style>
+        /* === 基本スタイル設定 === */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+
+        /* === ヘッダー（ナビゲーション） === */
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e0e0e0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #2b2b2b;
+            text-decoration: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #666;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: #0066cc;
+        }
+
+        /* === メインヒーローエリア === */
+        .hero {
+            background: linear-gradient(135deg, #0066cc, #00b4d8);
+            color: #ffffff;
+            text-align: center;
+            padding: 4rem 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* === セクション共通設定 === */
+        section {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3.5rem 1.5rem;
+        }
+
+        section h2 {
+            font-size: 1.6rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        section h2::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 3px;
+            background-color: #0066cc;
+            margin: 0.5rem auto 0;
+            border-radius: 2px;
+        }
+
+        /* === カードレイアウト（サービス/特徴） === */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            color: #0066cc;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        /* === お問い合わせ・フッター === */
+        .contact-box {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #0066cc;
+            color: #ffffff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #004c99;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background-color: #2b2b2b;
+            color: #888888;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ヘッダー -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">My Website</a>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ヒーローセクション -->
+    <div class="hero">
+        <h1>Welcome to My Website</h1>
+        <p>GitHub Pagesで公開している個人のポートフォリオ・紹介サイトです。</p>
+    </div>
+
+    <!-- 自己紹介（About） -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p style="text-align: center; max-width: 600px; margin: 0 auto;">
+            はじめまして！Webやプログラミングに興味があり、GitHub Pagesを使って自身のWebサイトを作成しました。日々の取り組みや成果物をここで発信していきます。
+        </p>
+    </section>
+
+    <!-- サービス・特徴（Services） -->
+    <section id="services">
+        <h2>What I Do</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>💻 Web Development</h3>
+                <p>HTML/CSSやJavaScriptを使用して、レスポンシブで見やすいWebサイトの制作を行っています。</p>
+            </div>
+            <div class="card">
+                <h3>🎨 Design</h3>
+                <p>シンプルかつ使いやすいUI/UXデザインを意識したサイト制作を心がけています。</p>
+            </div>
+            <div class="card">
+                <h3>📝 Blogging</h3>
+                <p>学習したことや興味のあるテクノロジーについて、定期的に情報を発信しています。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- お問い合わせ（Contact） -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-box">
+            <p>ご質問やご依頼がございましたら、お気軽にお問い合わせください。</p>
+            <a href="mailto:your-email@example.com" class="btn">メールを送る</a>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer>
+        <p>&copy; 2026 My Website. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
